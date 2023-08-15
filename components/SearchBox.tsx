@@ -23,11 +23,11 @@ function SearchBox() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Search for a news category"
-                className="w-full h-14 rounded-sm font-semibold placeholder-gray-500 text-gray-500 outline-none flex-1 bg-transparent dark:text-orange-300 "
+                className="w-full h-14 rounded-sm font-semibold placeholder-gray-500 text-gray-500 outline-none flex-1 bg-transparent dark:text-[#C06D69] "
             />
             <button
                 type="submit"
-                className="text-white disabled:text-neutral-900 bg-orange-400 py-3 px-6 rounded-full"
+                className="text-white disabled:text-neutral-900 bg-[#C06D69] py-3 px-6 rounded-full"
                 disabled={!input}
             >
                 Search

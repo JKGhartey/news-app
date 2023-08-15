@@ -35,13 +35,13 @@ function ArticlePage({ searchParams }: Props) {
                         </p>
                     </div>
                     <p className="pt-4 mb-6">{article.description}</p>
+                </div>
                     <Link href={article.url} target="_blank">
                         <button className="flex space-x-4 bg-slate-900 text-white  px-4 lg:px-8 py-2 lg:py-4 rounded-full dark:bg-slate-800 hover:bg-orange-500 dark:hover:bg-orange-400 ">
-                            <p>Read More</p>
+                            Read More
                             <ArrowUpRightIcon className="h-5 w-5 text-white" />
                         </button>
                     </Link>
-                </div>
             </section>
 
         </article>

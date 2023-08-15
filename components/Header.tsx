@@ -1,21 +1,46 @@
+"use client"
+
 import React from "react";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import NavLinks from "./NavLinks";
 import SearchBox from "./SearchBox";
 import DarkModeButton from "./DarkModeButton";
+import Image from "next/image";
+import { useTheme } from "next-themes";
 // import Navlinks from "./Navlinks"
 // import SearchBox from "./SearchBox";
 function Header() {
+    const { systemTheme, theme, setTheme } = useTheme();
+
+    const currentTheme = theme === 'system' ? systemTheme : theme;
+
     return (
         <header>
             <div className="grid grid-cols-3 p-10 items-center">
-                <Bars3Icon className="h-8 w-8 cursor-pointer" />
+            {
+            currentTheme === 'dark' ? (
+                <Image
+                src="/logos/vector/default-monochrome.svg"
+                alt="logo"
+                height={40}
+                width={160}
+            />
+            ) : (
+                <Image
+                src="/logos/vector/default-monochrome-black.svg"
+                alt="logo"
+                height={40}
+                width={160}
+            />
+            )}
+ 
+              
                 <Link href="/" prefetch={false}>
                     <h1 className="font-serif text-4xl text-center">
-                        The{" "}
-                        <span className="underline decoration  decoration-orange-600">
-                            Breaking
+                        Daily{" "}
+                        <span className="underline decoration  decoration-[#D2B05C]">
+                            Dawn
                         </span>{" "}
                         News
                     </h1>
@@ -27,11 +52,11 @@ function Header() {
                         Subscribe to newsletter
                     </button>
                 </div>
-            
+
             </div>
             <NavLinks />
             <SearchBox />
-           
+
         </header>
     );
 }

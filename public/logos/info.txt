@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: KaushanScript-Regular
+font link: https://fonts.google.com/specimen/Kaushan+Script
+font author: Impallari Type
+font author site: www.impallari.com
+
+
+icon designer: Paul J Miller
+icon designer link: /pmiller687
+        
+{"bg-gradient-0":"#C06D69","bg-gradient-1":"#D2B05C","icon":"#ffffff","font":"#ffffff","slogan":"#ffffff"}
+      
