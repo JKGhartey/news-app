@@ -1,7 +1,18 @@
-import Image from 'next/image'
+import NewsList from "@/components/NewsList"
+import { categories } from "@/constants"
+import fetchNews from "@/lib/fetchNews"
 
-export default function Home() {
+async function Homepage() {
+
+  // fetch the news data
+  const news: NewsResponse = await fetchNews(categories.join(","))
+
+
   return (
-    <main></main>
+    <div>
+      <NewsList news={news} />
+    </div>
   )
 }
+
+export default Homepage
