@@ -1,6 +1,6 @@
 import Image from "next/image"
-// import ReadMoreButton from "./ReadMoreButton"
-// import TimeStamp from "./TimeStamp"
+import ReadMoreButton from "./ReadMoreButton"
+import TimeStamp from "./Timestamp"
 
 type Props = {
   article: Article
@@ -25,12 +25,12 @@ function Article({ article }: Props) {
           <footer className="text-xs text-right ml-auto flex space-x-1 pt-5 italic text-gray-400">
             <p>{article.source}</p>
             <p>
-              {/* <TimeStamp time={article.published_at} /> */}
+              <TimeStamp time={article.published_at} />
 
             </p>
           </footer>
         </div>
-        {/* <ReadMoreButton article={article} /> */}
+        <ReadMoreButton article={article} />
       </div>
     </article>
   )
